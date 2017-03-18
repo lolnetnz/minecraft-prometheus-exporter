@@ -1,10 +1,12 @@
 # Minecraft Prometheus Exporter
 
-A **Bukkit plugin** which exports Minecraft server stats for Prometheus.
+Note: this version is a ported version of the bukkit plugin for BungeeCord
+
+A **BungeeCord plugin** which exports Minecraft server stats for Prometheus.
 
 ## Quick Start
 
-Drop the the prometheus-exporter.jar into your Bukkit plugins directory and start your Minecraft server.
+Drop the the prometheus-exporter.jar into your BungeeCord plugins directory and start your Minecraft server.
 
 After startup, the Prometheus metrics endpoint should be available at ``localhost:9225/metrics`` (assuming localhost is the server hostname).
 
@@ -17,7 +19,7 @@ Add the following job to the ``scrape_configs`` section of your Prometheus confi
 ```yml
 - job_name: 'minecraft'
   static_configs:
-    - targets: ['localhost:9225']
+    - targets: ['localhost:9224']
 ```
 
 ## Import Grafana Dashboard
